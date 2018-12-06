@@ -1,0 +1,21 @@
+Sometimes distribution providers (such as UCS) only give you VirtualBox .ova files to test their software. Here is how you can easily and non-interactively import a .ova file into a .box for use with Vagrant.
+
+$ VBoxManage import NAME.ova --vsys 0 --eula accept                                                                                                                                   
+
+Then list your VMs to find the VM ID:
+
+$ VBoxManage list vms
+
+$ vagrant package --base kaliID --output kali.box                                                                                                                             
+And add it to the list of your local Vagrant boxes:
+
+$ vagrant box add kali.box --name kali
+
+Finally, you can create a Vagrantfile to use this box:
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "kali"
+  # ...
+end
+
+And vagrant up!

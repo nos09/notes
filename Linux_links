@@ -1,0 +1,15 @@
+What is a linux link?
+
+-- Everyfile in the filesystem has an inode (Index Node)
+-- Contains all files information except the file contents and name.
+-- Just like a personal ID or a passport (Without a name!)
+
+-- They contain the following
+
+- Inode numver
+- File size
+- Owner information
+- Permissions
+- File type
+- Number of Links
+ 

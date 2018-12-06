@@ -1,0 +1,5 @@
+enable the VirtualBox display, which is off by default. Halt the VM and uncomment these lines in Vagrantfile:
+
+config.vm.provider :virtualbox do |vb|
+  vb.gui = true
+end

@@ -1,0 +1,30 @@
+APPLICATION LOAD BALANCER:
+
+- Application load balancer operates at request lavel(layer7), routing traffic to targets - ec2 instances, containers, IP address and Lambda funtions.
+- Its targeted towrads more modern appliaction architectures, including microservies and container-based applications. Application load balancer also makes sure to use latest SSL/TLS ciphers and protocols are used at all times.
+
+Key Features:
+- Layer-7 load balancing: You can load balance HTTP/HTTPS applications and use layer 7-specific featueres, such as X-Forwarded-For headers.
+- HTTPS support: An application load balancer supports HTTPS termination between the clients and the load balancer. Application Load Balancers
+also offer management of SSL certificates through AWS Identity and Access Management (IAM) and AWS Certificate Manager for pre-defined security policies.
+- Server Name Indication: 
+- IP address as Targets: 
+- Lamda funcitons as targets: You can use an Application Load Balancer as a common HTTP endpoit for applications that use servers and serverless computing. You can build an entire website using Lambda functinons or combine EC2 instances, containers, on-premises servers and Lambda functions to build applications. 
+- High Availability: An application Load Balancer requires you to specify more than one Availibility zone. 
+- Security Features: When using VPC, you can create and manage security groups associated with Elastic Load Balancing to provide additional networking and security options. You can create internet facing or an internal load balancer.
+- Content-based Routing: If the application is composed of several individual services, an application load balancer can route a request to a service based on the content of the request. : 1. Host-based routing: you can route a client request based on the Host field of the HTTP header allowing you to route to the mulitple domains from the same load balancer; 2. You can route a client request based on the URL path of the HTTP header: 
+- Containerized application support
+- HTTP/2 Support
+- WebSockets support
+- Native IPv6 Support
+- Sticky Sessions: Appliaction load balancer supports sticky sessions using load balancer generated cookies.
+- Health Checks: Application load balancer imporves insights into the health in two ways: (1) health checks improvements that allow you to connfigure detailed erorr codes from 200-499. The health checks allow you to monitor the health of each of your services behind the load balancer, and (2)new matrics that give insights into the traffic for each of the services running on an EC2 instances. 
+- CloudWatch: reports Application load balancer metrics such as request coutns, error counts, error types, and request latency.
+- Logging: You can use the access logs features to record all requests sent to your load balancer, and store the logs in Amazon s3 for later analysis.
+- Delete Protection
+- Request Tracing: ALB injects a new custom identifier 'X-Amzn-Trace-I' HTTP header on all the requests coming into the load balancer, so you can track the request in your stack through each service. 
+- Web Application Firewall: You can now use AWS WAF to protect your web applications. It protects agains common web exploits.
+- Slow start mode with load-balancing algorithms
+- User authentication: ALB supports OpenID connect-compatible idPs(identity providers). You can also offload your authentication funtionality apps. It is also integrated with social identity providers such as Google, Facebook and Amazon.
+- Redirects: Application loadbalancer can redirect an incoming request from one URL to another URL. This includes the capability to redirect HTTP requests to HTTPS requests, which allows you to meet your compliance goal of secure browsing. You can also redirect request to new version/app.
+- Fixed Response: Application load balancer can control which client requests are served by your applications. This allows you to respond to incoming requests with HTTP error respones codes and custom error messages from the load balancers itself, without forwarding the request to the application. 

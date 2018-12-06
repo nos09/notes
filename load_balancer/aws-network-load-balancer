@@ -1,0 +1,5 @@
+Network LB operates at the connection lavel (Layer 4), routing connections to targets - EC2, Microservices and containers inside VPC based on IP protocol data. 
+
+Features: 
+
+- High Throughput:  
